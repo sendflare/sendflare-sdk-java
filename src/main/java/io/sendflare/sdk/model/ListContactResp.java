@@ -6,17 +6,17 @@ import java.util.List;
  * Get Contact list response entity
  */
 public class ListContactResp extends PaginateResp {
-    private List<ContactItem> data;
+    private List<Map<String, String>> list;
 
     public ListContactResp() {
     }
 
-    public List<ContactItem> getData() {
-        return data;
+    public List<Map<String, String>> getList() {
+        return list;
     }
 
-    public void setData(List<ContactItem> data) {
-        this.data = data;
+    public void setList(List<Map<String, String>> list) {
+        this.list = list;
     }
 }
 
