@@ -11,7 +11,7 @@
 
     <name>Sendflare SDK Java</name>
     <description>The SDK for sendflare service written in Java</description>
-    <url>https://docs.sendflare.io</url>
+    <url>https://docs.sendflare.com</url>
 
     <licenses>
         <license>
@@ -25,7 +25,7 @@
         <developer>
             <name>Sendflare Team</name>
             <organization>Sendflare</organization>
-            <organizationUrl>https://sendflare.io</organizationUrl>
+            <organizationUrl>https://sendflare.com</organizationUrl>
         </developer>
     </developers>
 

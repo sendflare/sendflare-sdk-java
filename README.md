@@ -253,7 +253,7 @@ mvn test
 
 ## Documentation
 
-[https://docs.sendflare.io](https://docs.sendflare.io)
+[https://docs.sendflare.com](https://docs.sendflare.com)
 
 ## LICENSE
 

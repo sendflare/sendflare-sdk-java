@@ -19,7 +19,7 @@ import java.util.Map;
  * Sendflare SDK Client
  */
 public class SendflareClient {
-    private static final String BASE_URL = "https://api.sendflare.io";
+    private static final String BASE_URL = "https://api.sendflare.com";
     private static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(10);
 
     private final String token;
