@@ -1,6 +1,7 @@
 package io.sendflare.sdk.model;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Get Contact list response entity
