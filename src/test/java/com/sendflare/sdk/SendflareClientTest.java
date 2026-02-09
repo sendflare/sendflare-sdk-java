@@ -1,6 +1,6 @@
-package io.sendflare.sdk;
+package com.sendflare.sdk;
 
-import io.sendflare.sdk.model.*;
+import com.sendflare.sdk.model.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

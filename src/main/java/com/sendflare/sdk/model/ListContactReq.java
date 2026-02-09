@@ -1,4 +1,4 @@
-package io.sendflare.sdk.model;
+package com.sendflare.sdk.model;
 
 /**
  * Get Contact list request entity

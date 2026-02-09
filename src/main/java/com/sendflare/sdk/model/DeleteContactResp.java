@@ -1,4 +1,4 @@
-package io.sendflare.sdk.model;
+package com.sendflare.sdk.model;
 
 /**
  * Delete contact response entity

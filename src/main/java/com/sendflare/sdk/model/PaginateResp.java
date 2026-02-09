@@ -1,18 +1,14 @@
-package io.sendflare.sdk.model;
+package com.sendflare.sdk.model;
 
 /**
- * Pagination request entity
+ * Pagination response entity
  */
-public class PaginateReq {
+public class PaginateResp {
     private int page;
     private int pageSize;
+    private long totalCount;
 
-    public PaginateReq() {
-    }
-
-    public PaginateReq(int page, int pageSize) {
-        this.page = page;
-        this.pageSize = pageSize;
+    public PaginateResp() {
     }
 
     public int getPage() {
@@ -29,6 +25,14 @@ public class PaginateReq {
 
     public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
+    }
+
+    public long getTotalCount() {
+        return totalCount;
+    }
+
+    public void setTotalCount(long totalCount) {
+        this.totalCount = totalCount;
     }
 }
 

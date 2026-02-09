@@ -1,6 +1,6 @@
-package io.sendflare.sdk;
+package com.sendflare.sdk;
 
-import io.sendflare.sdk.model.*;
+import com.sendflare.sdk.model.*;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
