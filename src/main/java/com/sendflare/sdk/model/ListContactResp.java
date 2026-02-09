@@ -14,12 +14,7 @@ public class ListContactResp {
     private String message;
     private long ts;
     
-    // PaginateResp fields
-    private int page;
-    private int pageSize;
-    private long totalCount;
-    
-    // Data wrapper with list
+    // Data wrapper with pagination and list
     private ContactListData data;
 
     public ListContactResp() {
@@ -66,31 +61,6 @@ public class ListContactResp {
         this.ts = ts;
     }
 
-    // PaginateResp getters and setters
-    public int getPage() {
-        return page;
-    }
-
-    public void setPage(int page) {
-        this.page = page;
-    }
-
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public long getTotalCount() {
-        return totalCount;
-    }
-
-    public void setTotalCount(long totalCount) {
-        this.totalCount = totalCount;
-    }
-
     // Data getter and setter
     public ContactListData getData() {
         return data;
@@ -101,12 +71,42 @@ public class ListContactResp {
     }
 
     /**
-     * Nested data structure containing the contact list
+     * Nested data structure containing pagination and contact list
      */
     public static class ContactListData {
+        // PaginateResp fields
+        private int page;
+        private int pageSize;
+        private long totalCount;
+        
+        // Contact list
         private List<Map<String, String>> list;
 
         public ContactListData() {
+        }
+
+        public int getPage() {
+            return page;
+        }
+
+        public void setPage(int page) {
+            this.page = page;
+        }
+
+        public int getPageSize() {
+            return pageSize;
+        }
+
+        public void setPageSize(int pageSize) {
+            this.pageSize = pageSize;
+        }
+
+        public long getTotalCount() {
+            return totalCount;
+        }
+
+        public void setTotalCount(long totalCount) {
+            this.totalCount = totalCount;
         }
 
         public List<Map<String, String>> getList() {

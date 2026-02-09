@@ -54,7 +54,9 @@ class SendflareClientTest {
         try {
             ListContactResp resp = client.getContactList(req);
             System.out.println("Response: " + resp);
-            System.out.println("Total count: " + resp.getTotalCount());
+            if (resp.getData() != null) {
+                System.out.println("Total count: " + resp.getData().getTotalCount());
+            }
         } catch (Exception e) {
             System.out.println("Error (expected without valid token): " + e.getMessage());
         }
