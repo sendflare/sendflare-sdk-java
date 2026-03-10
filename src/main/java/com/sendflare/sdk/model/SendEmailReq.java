@@ -50,5 +50,20 @@ public class SendEmailReq {
     public void setBody(String body) {
         this.body = body;
     }
+    public List<String> getCC() {
+        return cc;
+    }
+
+    public void setCC(List<String> cc) {
+        this.cc = cc;
+    }
+
+    public List<String> getBCC() {
+        return bcc;
+    }
+
+    public void setBCC(List<String> bcc) {
+        this.bcc = bcc;
+    }
 }
 

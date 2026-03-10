@@ -31,7 +31,9 @@ class SendflareClientTest {
                 "test@example.com",
                 "to@example.com",
                 "test",
-                "test email"
+                "test email",
+                Arrays.asList("cc@example.com"),
+                Arrays.asList("bcc@example.com")
         );
         
         System.out.println("Request: " + req);
