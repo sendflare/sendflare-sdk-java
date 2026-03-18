@@ -64,6 +64,30 @@ public class SendflareClient {
     }
 
     /**
+     * Send a batch of emails
+     *
+     * @param req Batch send email request
+     * @return Batch send email response
+     * @throws IOException          if an I/O error occurs
+     * @throws InterruptedException if the operation is interrupted
+     */
+    public BatchSendEmailResp batchSendEmail(BatchSendEmailReq req) throws IOException, InterruptedException {
+        String path = "/v1/batchSend";
+        String jsonBody = gson.toJson(req);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(BASE_URL + path))
+                .timeout(REQUEST_TIMEOUT)
+                .header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
+                .build();
+
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        return gson.fromJson(response.body(), BatchSendEmailResp.class);
+    }
+
+    /**
      * Get contact list
      *
      * @param req List contact request

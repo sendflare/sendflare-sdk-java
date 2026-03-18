@@ -48,6 +48,29 @@ class SendflareClientTest {
     }
 
     @Test
+    void testBatchSendEmail() {
+        BatchSendEmailReq req = new BatchSendEmailReq(
+                "test@example.com",
+                Arrays.asList("to@example.com"),
+                "test",
+                "test email",
+                Arrays.asList("cc@example.com"),
+                Arrays.asList("bcc@example.com"),
+                Arrays.asList("replyTo@example.com")
+        );
+        
+        System.out.println("Request: " + req);
+        
+        try {
+            BatchSendEmailResp resp = client.batchSendEmail(req);
+            System.out.println("Response: " + resp);
+            System.out.println("Success: " + resp.isSuccess());
+        } catch (Exception e) {
+            System.out.println("Error (expected without valid token): " + e.getMessage());
+        }
+    }
+
+    @Test
     void testGetContactList() {
         ListContactReq req = new ListContactReq("test", 1, 10);
         
