@@ -14,9 +14,9 @@ Add this dependency to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>io.sendflare</groupId>
+    <groupId>com.sendflare</groupId>
     <artifactId>sendflare-sdk-java</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.3</version>
 </dependency>
 ```
 
@@ -25,7 +25,7 @@ Add this dependency to your `pom.xml`:
 Add this dependency to your `build.gradle`:
 
 ```gradle
-implementation 'io.sendflare:sendflare-sdk-java:1.0.0'
+implementation 'com.sendflare:sendflare-sdk-java:1.0.3'
 ```
 
 ## Code Examples
@@ -33,9 +33,9 @@ implementation 'io.sendflare:sendflare-sdk-java:1.0.0'
 ### Basic Usage
 
 ```java
-import io.sendflare.sdk.SendflareClient;
-import io.sendflare.sdk.model.SendEmailReq;
-import io.sendflare.sdk.model.SendEmailResp;
+import com.sendflare.sdk.SendflareClient;
+import com.sendflare.sdk.model.SendEmailReq;
+import com.sendflare.sdk.model.SendEmailResp;
 
 public class Example {
     public static void main(String[] args) {
@@ -61,9 +61,9 @@ public class Example {
 ### Send Email
 
 ```java
-import io.sendflare.sdk.SendflareClient;
-import io.sendflare.sdk.model.SendEmailReq;
-import io.sendflare.sdk.model.SendEmailResp;
+import com.sendflare.sdk.SendflareClient;
+import com.sendflare.sdk.model.SendEmailReq;
+import com.sendflare.sdk.model.SendEmailResp;
 
 SendflareClient client = new SendflareClient("your-api-token");
 
@@ -89,8 +89,8 @@ try {
 ### Manage Contacts
 
 ```java
-import io.sendflare.sdk.SendflareClient;
-import io.sendflare.sdk.model.*;
+import com.sendflare.sdk.SendflareClient;
+import com.sendflare.sdk.model.*;
 import java.util.HashMap;
 import java.util.Map;
 
