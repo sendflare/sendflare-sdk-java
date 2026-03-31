@@ -1,5 +1,7 @@
 package com.sendflare.sdk.model;
 
+import java.util.List;
+
 /**
  * Send Email request entity
  */
@@ -8,15 +10,21 @@ public class SendEmailReq {
     private String to;
     private String subject;
     private String body;
+    private List<String> cc;
+    private List<String> bcc;
+    private List<String> replyTo;
 
     public SendEmailReq() {
     }
 
-    public SendEmailReq(String from, String to, String subject, String body) {
+    public SendEmailReq(String from, String to, String subject, String body, List<String> cc, List<String> bcc, List<String> replyTo) {
         this.from = from;
         this.to = to;
         this.subject = subject;
         this.body = body;
+        this.cc = cc;
+        this.bcc = bcc;
+        this.replyTo = replyTo;
     }
 
     public String getFrom() {
@@ -64,6 +72,14 @@ public class SendEmailReq {
 
     public void setBCC(List<String> bcc) {
         this.bcc = bcc;
+    }
+
+    public List<String> getReplyTo() {
+        return replyTo;
+    }
+
+    public void setReplyTo(List<String> replyTo) {
+        this.replyTo = replyTo;
     }
 }
 

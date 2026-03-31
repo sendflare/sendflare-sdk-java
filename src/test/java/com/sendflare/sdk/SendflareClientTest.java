@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Arrays;
 
 /**
  * SendflareClient Test
@@ -33,7 +34,8 @@ class SendflareClientTest {
                 "test",
                 "test email",
                 Arrays.asList("cc@example.com"),
-                Arrays.asList("bcc@example.com")
+                Arrays.asList("bcc@example.com"),
+                Arrays.asList("replyTo@example.com")
         );
         
         System.out.println("Request: " + req);

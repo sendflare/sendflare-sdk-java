@@ -1,13 +1,19 @@
 package com.sendflare.sdk.model;
 
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Batch Send Email request entity
  */
 public class BatchSendEmailReq {
     private String from;
-    private String to;
+    private List<String> to;
     private String subject;
     private String body;
+    private List<String> cc;
+    private List<String> bcc;
+    private List<String> replyTo;
 
     public BatchSendEmailReq() {
     }
